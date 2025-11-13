@@ -74,3 +74,10 @@ function showNextPhoto() {
   restartTimer();
 }
 
+function showPrevPhoto() {
+  if (!mImages.length) return;
+  mCurrentIndex = (mCurrentIndex - 1 + mImages.length) % mImages.length;
+  swapPhoto();
+  restartTimer();
+}
+
