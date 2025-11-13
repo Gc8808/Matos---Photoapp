@@ -81,3 +81,14 @@ function showPrevPhoto() {
   restartTimer();
 }
 
+function startTimer() {
+  if (slideshowTimer) clearInterval(slideshowTimer);
+  slideshowTimer = setInterval(showNextPhoto, mWaitTime);
+}
+
+
+function restartTimer() {
+  clearInterval(slideshowTimer);
+  slideshowTimer = setInterval(showNextPhoto, mWaitTime);
+}
+
