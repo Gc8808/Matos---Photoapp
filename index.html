@@ -16,32 +16,33 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
-    
+
 </head>
 
 <body>
     <div class="container my-4">
-        <div id="photoBooth" class="text-center bg-white p-3 rounded shadow-sm mx-auto">
-            <h1 class="banner mb-3">IS219 Slide Show</h1>
+        <div id="photoBooth" class="text-center app p-3 rounded shadow-sm mx-auto">
+            <h1 class="banner mb-3">Bmw showcase</h1>
             <div id="slideShow" class="row justify-content-center">
 
                 <!-- Photo Holder Section -->
                 <div class="col-12 col-md-8 photoHolder mb-3">
-                    <img class="thumbnail img-fluid" id="photo"
-                        src="cosySec2.webp" alt="Gallery Image" />
+                    <img class="thumbnail img-fluid" id="photo" src="cosySec2.webp" alt="Gallery Image" />
                 </div>
 
                 <!-- More Indicator and Navigation Controls -->
                 <div class="col-12 text-center my-2">
-                    <img class="moreIndicator rot90 img-fluid" src="img/more.png" alt="More Content" />
+                    <btn id="showhide"> <img class="moreIndicator  rot90 img-fluid" src="img/more.png" id="imagerot"
+                            alt="More Content" /> </btn>
                 </div>
                 <div id="nav" class="col-12 d-flex justify-content-between">
-                    <img id="prevPhoto" class="rot180 img-fluid" src="img/arrow.png" alt="Previous Photo" />
-                  <btn id="nextBtn">  <img id="nextPhoto" class="img-fluid" src="img/arrow.png" alt="Next Photo" /> </btn>
+                   <btn id="prevBtn"> <img id="prevPhoto" class="rot180 img-fluid" src="img/arrow.png" alt="Previous Photo" /> </btn>
+                    <btn id="nextBtn"> <img id="nextPhoto" class="img-fluid" src="img/arrow.png" alt="Next Photo" />
+                    </btn>
                 </div>
 
                 <!-- Photo Details Section -->
-                <div class="col-12 details mt-3 p-2">
+                <div class="col-12 details mt-3 p-2" id="details">
                     <p class="location">Location: </p>
                     <p class="description">Description: </p>
                     <p class="date">Date: </p>

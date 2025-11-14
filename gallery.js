@@ -17,10 +17,15 @@ $(document).ready(() => {
   // -----------------------------------------------------------------
   // 2. More-indicator toggle
   // -----------------------------------------------------------------
-  $('#moreIndicator').on('click', function () {
-    $(this).toggleClass('rot90 rot270');
-    $('.details').slideToggle(300);
-  });
+$(document).ready(function () {
+    $('#showhide').on('click', function () {
+        // Toggle between two rotation classes
+        $("#imagerot").toggleClass('rot90 rot270');
+
+        // Slide toggle the details section
+        $('.details').stop(true, true).slideToggle(300);
+    });
+});
 
   // -----------------------------------------------------------------
   // 3. Navigation buttons
@@ -95,4 +100,15 @@ function startTimer() {
 function restartTimer() {
   clearInterval(slideshowTimer);
   slideshowTimer = setInterval(showNextPhoto, mWaitTime);
+}
+
+function hideitems() {
+  const showHideBtn = document.getElementById('showhide');
+  const details = document.getElementById('details');
+
+
+  showHideBtn.addEventListener('click', () => {
+    // Toggle between "block" and "none"
+   $('.details').hide();
+  });
 }
